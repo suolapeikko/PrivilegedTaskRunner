@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E43EF1AF1F3C527700278CCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EF1AE1F3C527700278CCA /* AppDelegate.swift */; };
+		E43EF1B31F3C527700278CCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43EF1B21F3C527700278CCA /* Assets.xcassets */; };
+		E43EF1C41F3C52BA00278CCA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EF1C31F3C52BA00278CCA /* main.swift */; };
+		E43EF1C91F3C53B900278CCA /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EF1C81F3C53B900278CCA /* AppViewController.swift */; };
+		E43EF1CF1F3C544000278CCA /* PrivilegedTaskRunnerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EF1CC1F3C544000278CCA /* PrivilegedTaskRunnerHelper.swift */; };
+		E43EF1D01F3C544000278CCA /* ProcessHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EF1CD1F3C544000278CCA /* ProcessHelper.swift */; };
+		E43EF1D11F3C544000278CCA /* RemoteProcessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EF1CE1F3C544000278CCA /* RemoteProcessProtocol.swift */; };
+		E43EF1D41F3C54EC00278CCA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43EF1D21F3C54EC00278CCA /* MainMenu.xib */; };
+		E43EF1D51F3C591F00278CCA /* PrivilegedTaskRunnerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EF1CC1F3C544000278CCA /* PrivilegedTaskRunnerHelper.swift */; };
+		E43EF1D61F3C591F00278CCA /* ProcessHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EF1CD1F3C544000278CCA /* ProcessHelper.swift */; };
+		E43EF1D71F3C591F00278CCA /* RemoteProcessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EF1CE1F3C544000278CCA /* RemoteProcessProtocol.swift */; };
+		E43EF1D91F3C595200278CCA /* AppAuthorizationRights.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EF1D81F3C595200278CCA /* AppAuthorizationRights.swift */; };
+		E43EF1DF1F4CA2A600278CCA /* com.suolapeikko.examples.PrivilegedTaskRunnerHelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = E43EF1C11F3C52BA00278CCA /* com.suolapeikko.examples.PrivilegedTaskRunnerHelper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E43EF1BF1F3C52BA00278CCA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		E43EF1DB1F3C59F700278CCA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchServices;
+			dstSubfolderSpec = 1;
+			files = (
+				E43EF1DF1F4CA2A600278CCA /* com.suolapeikko.examples.PrivilegedTaskRunnerHelper in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E43EF1AB1F3C527700278CCA /* PrivilegedTaskRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivilegedTaskRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E43EF1AE1F3C527700278CCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E43EF1B21F3C527700278CCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E43EF1B71F3C527700278CCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E43EF1C11F3C52BA00278CCA /* com.suolapeikko.examples.PrivilegedTaskRunnerHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = com.suolapeikko.examples.PrivilegedTaskRunnerHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		E43EF1C31F3C52BA00278CCA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E43EF1C81F3C53B900278CCA /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		E43EF1CA1F3C544000278CCA /* PrivilegedTaskRunnerHelper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PrivilegedTaskRunnerHelper-Info.plist"; sourceTree = "<group>"; };
+		E43EF1CB1F3C544000278CCA /* PrivilegedTaskRunnerHelper-Launchd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PrivilegedTaskRunnerHelper-Launchd.plist"; sourceTree = "<group>"; };
+		E43EF1CC1F3C544000278CCA /* PrivilegedTaskRunnerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivilegedTaskRunnerHelper.swift; sourceTree = "<group>"; };
+		E43EF1CD1F3C544000278CCA /* ProcessHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessHelper.swift; sourceTree = "<group>"; };
+		E43EF1CE1F3C544000278CCA /* RemoteProcessProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteProcessProtocol.swift; sourceTree = "<group>"; };
+		E43EF1D31F3C54EC00278CCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E43EF1D81F3C595200278CCA /* AppAuthorizationRights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAuthorizationRights.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E43EF1A81F3C527700278CCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E43EF1BE1F3C52BA00278CCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E43EF1A21F3C527700278CCA = {
+			isa = PBXGroup;
+			children = (
+				E43EF1AD1F3C527700278CCA /* PrivilegedTaskRunner */,
+				E43EF1C21F3C52BA00278CCA /* PrivilegedTaskRunnerHelper */,
+				E43EF1AC1F3C527700278CCA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E43EF1AC1F3C527700278CCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E43EF1AB1F3C527700278CCA /* PrivilegedTaskRunner.app */,
+				E43EF1C11F3C52BA00278CCA /* com.suolapeikko.examples.PrivilegedTaskRunnerHelper */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E43EF1AD1F3C527700278CCA /* PrivilegedTaskRunner */ = {
+			isa = PBXGroup;
+			children = (
+				E43EF1AE1F3C527700278CCA /* AppDelegate.swift */,
+				E43EF1D81F3C595200278CCA /* AppAuthorizationRights.swift */,
+				E43EF1C81F3C53B900278CCA /* AppViewController.swift */,
+				E43EF1B21F3C527700278CCA /* Assets.xcassets */,
+				E43EF1D21F3C54EC00278CCA /* MainMenu.xib */,
+				E43EF1B71F3C527700278CCA /* Info.plist */,
+			);
+			path = PrivilegedTaskRunner;
+			sourceTree = "<group>";
+		};
+		E43EF1C21F3C52BA00278CCA /* PrivilegedTaskRunnerHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E43EF1C31F3C52BA00278CCA /* main.swift */,
+				E43EF1CA1F3C544000278CCA /* PrivilegedTaskRunnerHelper-Info.plist */,
+				E43EF1CB1F3C544000278CCA /* PrivilegedTaskRunnerHelper-Launchd.plist */,
+				E43EF1CC1F3C544000278CCA /* PrivilegedTaskRunnerHelper.swift */,
+				E43EF1CD1F3C544000278CCA /* ProcessHelper.swift */,
+				E43EF1CE1F3C544000278CCA /* RemoteProcessProtocol.swift */,
+			);
+			path = PrivilegedTaskRunnerHelper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E43EF1AA1F3C527700278CCA /* PrivilegedTaskRunner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E43EF1BA1F3C527700278CCA /* Build configuration list for PBXNativeTarget "PrivilegedTaskRunner" */;
+			buildPhases = (
+				E43EF1A71F3C527700278CCA /* Sources */,
+				E43EF1A81F3C527700278CCA /* Frameworks */,
+				E43EF1A91F3C527700278CCA /* Resources */,
+				E43EF1DB1F3C59F700278CCA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrivilegedTaskRunner;
+			productName = PrivilegedTaskRunner;
+			productReference = E43EF1AB1F3C527700278CCA /* PrivilegedTaskRunner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E43EF1C01F3C52BA00278CCA /* com.suolapeikko.examples.PrivilegedTaskRunnerHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E43EF1C51F3C52BA00278CCA /* Build configuration list for PBXNativeTarget "com.suolapeikko.examples.PrivilegedTaskRunnerHelper" */;
+			buildPhases = (
+				E43EF1BD1F3C52BA00278CCA /* Sources */,
+				E43EF1BE1F3C52BA00278CCA /* Frameworks */,
+				E43EF1BF1F3C52BA00278CCA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = com.suolapeikko.examples.PrivilegedTaskRunnerHelper;
+			productName = PrivilegedTaskRunnerHelper;
+			productReference = E43EF1C11F3C52BA00278CCA /* com.suolapeikko.examples.PrivilegedTaskRunnerHelper */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E43EF1A31F3C527700278CCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Suolapeikko;
+				TargetAttributes = {
+					E43EF1AA1F3C527700278CCA = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = RWR4H6QC95;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
+					};
+					E43EF1C01F3C52BA00278CCA = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = RWR4H6QC95;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = E43EF1A61F3C527700278CCA /* Build configuration list for PBXProject "PrivilegedTaskRunner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E43EF1A21F3C527700278CCA;
+			productRefGroup = E43EF1AC1F3C527700278CCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E43EF1AA1F3C527700278CCA /* PrivilegedTaskRunner */,
+				E43EF1C01F3C52BA00278CCA /* com.suolapeikko.examples.PrivilegedTaskRunnerHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E43EF1A91F3C527700278CCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E43EF1B31F3C527700278CCA /* Assets.xcassets in Resources */,
+				E43EF1D41F3C54EC00278CCA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E43EF1A71F3C527700278CCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E43EF1D51F3C591F00278CCA /* PrivilegedTaskRunnerHelper.swift in Sources */,
+				E43EF1D61F3C591F00278CCA /* ProcessHelper.swift in Sources */,
+				E43EF1D91F3C595200278CCA /* AppAuthorizationRights.swift in Sources */,
+				E43EF1D71F3C591F00278CCA /* RemoteProcessProtocol.swift in Sources */,
+				E43EF1C91F3C53B900278CCA /* AppViewController.swift in Sources */,
+				E43EF1AF1F3C527700278CCA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E43EF1BD1F3C52BA00278CCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E43EF1CF1F3C544000278CCA /* PrivilegedTaskRunnerHelper.swift in Sources */,
+				E43EF1D01F3C544000278CCA /* ProcessHelper.swift in Sources */,
+				E43EF1C41F3C52BA00278CCA /* main.swift in Sources */,
+				E43EF1D11F3C544000278CCA /* RemoteProcessProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E43EF1D21F3C54EC00278CCA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E43EF1D31F3C54EC00278CCA /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E43EF1B81F3C527700278CCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+			};
+			name = Debug;
+		};
+		E43EF1B91F3C527700278CCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+			};
+			name = Release;
+		};
+		E43EF1BB1F3C527700278CCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = RWR4H6QC95;
+				INFOPLIST_FILE = PrivilegedTaskRunner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suolapeikko.examples.PrivilegedTaskRunner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		E43EF1BC1F3C527700278CCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = RWR4H6QC95;
+				INFOPLIST_FILE = PrivilegedTaskRunner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suolapeikko.examples.PrivilegedTaskRunner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		E43EF1C61F3C52BA00278CCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				DEVELOPMENT_TEAM = RWR4H6QC95;
+				INFOPLIST_FILE = "$(SRCROOT)/PrivilegedTaskRunnerHelper/PrivilegedTaskRunnerHelper-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"\"$(SRCROOT)/PrivilegedTaskRunnerHelper/PrivilegedTaskRunnerHelper-Info.plist\"",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"\"$(SRCROOT)/PrivilegedTaskRunnerHelper/PrivilegedTaskRunnerHelper-Launchd.plist\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.suolapeikko.examples.PrivilegedTaskRunnerHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		E43EF1C71F3C52BA00278CCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				DEVELOPMENT_TEAM = RWR4H6QC95;
+				INFOPLIST_FILE = "$(SRCROOT)/PrivilegedTaskRunnerHelper/PrivilegedTaskRunnerHelper-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"\"$(SRCROOT)/PrivilegedTaskRunnerHelper/PrivilegedTaskRunnerHelper-Info.plist\"",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"\"$(SRCROOT)/PrivilegedTaskRunnerHelper/PrivilegedTaskRunnerHelper-Launchd.plist\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.suolapeikko.examples.PrivilegedTaskRunnerHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E43EF1A61F3C527700278CCA /* Build configuration list for PBXProject "PrivilegedTaskRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E43EF1B81F3C527700278CCA /* Debug */,
+				E43EF1B91F3C527700278CCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E43EF1BA1F3C527700278CCA /* Build configuration list for PBXNativeTarget "PrivilegedTaskRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E43EF1BB1F3C527700278CCA /* Debug */,
+				E43EF1BC1F3C527700278CCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E43EF1C51F3C52BA00278CCA /* Build configuration list for PBXNativeTarget "com.suolapeikko.examples.PrivilegedTaskRunnerHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E43EF1C61F3C52BA00278CCA /* Debug */,
+				E43EF1C71F3C52BA00278CCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E43EF1A31F3C527700278CCA /* Project object */;
+}
