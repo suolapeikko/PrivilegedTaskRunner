@@ -1,5 +1,7 @@
 # Privileged Helper Example with Swift 4
 
+My take on privileged helper, thanks to [Erik's privileged helper tool example](https://github.com/erikberglund/SwiftPrivilegedHelper)
+
 ## Project and Target
 * Create a project (for example, a normal Cocoa project, like PrivilegedTaskRunner in this example)
 * Create a new command line target (PrivilegedTaskRunnerHelper)
