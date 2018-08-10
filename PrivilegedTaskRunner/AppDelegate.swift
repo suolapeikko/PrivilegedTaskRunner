@@ -14,9 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var appVC: AppViewController!
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-    
-        appVC.installHelperDaemon()
-        
+            
         // Check for existing helper daemon and install it if it does not exist
         if(!appVC.checkIfHelperDaemonExists()) {
             appVC.installHelperDaemon()

@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
@@ -29,6 +29,9 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>SMPrivilegedExecutables</key>
-	<dict/>
+	<dict>
+		<key>com.suolapeikko.examples.PrivilegedTaskRunnerHelper</key>
+		<string>anchor apple generic and identifier "com.suolapeikko.examples.PrivilegedTaskRunnerHelper" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = RWR4H6QC95)</string>
+	</dict>
 </dict>
 </plist>

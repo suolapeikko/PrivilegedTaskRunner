@@ -201,7 +201,7 @@ class AppViewController: NSViewController {
         
         // Daemon path, if it is already installed
         let helperURL = Bundle.main.bundleURL.appendingPathComponent("Contents/Library/LaunchServices/\(HelperConstants.machServiceName)")
-        let helperBundleInfo = CFBundleCopyInfoDictionaryForURL(helperURL as CFURL!)
+        let helperBundleInfo = CFBundleCopyInfoDictionaryForURL(helperURL as CFURL)
         if helperBundleInfo != nil {
             foundAlreadyInstalledDaemon = true
         }
@@ -253,7 +253,7 @@ class AppViewController: NSViewController {
         
         // Daemon path
         let helperURL = Bundle.main.bundleURL.appendingPathComponent("Contents/Library/LaunchServices/\(HelperConstants.machServiceName)")
-        let helperBundleInfo = CFBundleCopyInfoDictionaryForURL(helperURL as CFURL!)
+        let helperBundleInfo = CFBundleCopyInfoDictionaryForURL(helperURL as CFURL)
         let helperInfo = helperBundleInfo! as NSDictionary
         let helperVersion = helperInfo["CFBundleVersion"] as! String
         
