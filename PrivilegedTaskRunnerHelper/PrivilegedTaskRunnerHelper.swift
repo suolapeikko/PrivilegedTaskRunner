@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AppKit
 
 class PrivilegedTaskRunnerHelper: NSObject, RemoteProcessProtocol, NSXPCListenerDelegate {
     
@@ -24,8 +25,51 @@ class PrivilegedTaskRunnerHelper: NSObject, RemoteProcessProtocol, NSXPCListener
         RunLoop.current.run()
     }
     
+    /// Check that code sign certificates match
+    func connectionIsValid(connection: NSXPCConnection ) -> Bool {
+        
+        let checker = CodesignChecker()
+        var localCertificates: [SecCertificate] = []
+        var remoteCertificates: [SecCertificate] = []
+        let pid = connection.processIdentifier
+        
+        do {
+            localCertificates = try checker.getCertificatesSelf()
+            remoteCertificates = try checker.getCertificates(forPID: pid)
+        }
+        catch let error as CodesignCheckerError {
+                NSLog(CodesignCheckerError.handle(error: error))
+        }
+        catch let error {
+            NSLog("Something unexpected happened: \(error.localizedDescription)")
+        }
+
+        NSLog("Local certificates: \(localCertificates)")
+        NSLog("Remote certificates: \(remoteCertificates)")
+
+        let remoteApp = NSRunningApplication.init(processIdentifier: pid)
+
+        // Compare certificates
+        if(remoteApp != nil && (localCertificates == remoteCertificates)) {
+            NSLog("Certificates match!")
+            return true
+        }
+        
+        return false
+    }
+    
     /// Called when the client connects to the helper daemon
     func listener(_ listener:NSXPCListener, shouldAcceptNewConnection connection: NSXPCConnection) -> Bool {
+        
+        // ----------------------------------------------------------------------------------------------------
+        //  Only accept new connections from applications using the same codesigning certificate as the helper
+        // ----------------------------------------------------------------------------------------------------
+        if (!connectionIsValid(connection: connection)) {
+            
+            NSLog("Codesign certificate validation failed")
+            
+            return false
+        }
         
         connection.exportedInterface = NSXPCInterface(with: RemoteProcessProtocol.self)
         connection.exportedObject = self;
