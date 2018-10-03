@@ -194,24 +194,11 @@ class AppViewController: NSViewController {
         return connection
     }
     
-    /// Check if Helper daemon exists
-    func checkIfHelperDaemonExists() -> Bool {
-
-        var foundAlreadyInstalledDaemon = false
-        
-        // Daemon path, if it is already installed
-        let helperURL = Bundle.main.bundleURL.appendingPathComponent("Contents/Library/LaunchServices/\(HelperConstants.machServiceName)")
-        let helperBundleInfo = CFBundleCopyInfoDictionaryForURL(helperURL as CFURL)
-        if helperBundleInfo != nil {
-            foundAlreadyInstalledDaemon = true
-        }
-        
-        return foundAlreadyInstalledDaemon
-    }
-    
     /// Install new helper daemon
     func installHelperDaemon() {
         
+        NSLog("AppviewController: Privileged Helper daemon was not found, installing a new one...")
+
         // Create authorization reference for the user
         var authRef: AuthorizationRef?
         var authStatus = AuthorizationCreate(nil, nil, [], &authRef)
@@ -248,9 +235,21 @@ class AppViewController: NSViewController {
         AuthorizationFree(authRef!, [])
     }
     
+    /// Check if Helper daemon exists
+    func checkIfHelperDaemonExists() -> Bool {
+        
+        let fileManager = FileManager.default
+        
+        if (!fileManager.fileExists(atPath: "/Library/PrivilegedHelperTools/com.suolapeikko.examples.PrivilegedTaskRunnerHelper")) {
+            return false
+        } else {
+            return true
+        }
+    }
+
     /// Compare app's helper version to installed daemon's version and update if necessary
     func checkHelperVersionAndUpdateIfNecessary() {
-        
+       
         // Daemon path
         let helperURL = Bundle.main.bundleURL.appendingPathComponent("Contents/Library/LaunchServices/\(HelperConstants.machServiceName)")
         let helperBundleInfo = CFBundleCopyInfoDictionaryForURL(helperURL as CFURL)
@@ -268,7 +267,10 @@ class AppViewController: NSViewController {
             installedVersion in
             NSLog("AppviewController: PrivilegedTaskRunner Helper Installed Version => \(installedVersion)")
             if(installedVersion != helperVersion) {
-                installHelperDaemon()
+                self.installHelperDaemon()
+            }
+            else {
+                NSLog("AppviewController: Bundle version matches privileged helper version, so no need to install")
             }
         })
     }

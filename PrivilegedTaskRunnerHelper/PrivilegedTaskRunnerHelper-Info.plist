@@ -9,7 +9,7 @@
 	<key>CFBundleName</key>
 	<string>com.suolapeikko.examples.PrivilegedTaskRunnerHelper</string>
 	<key>CFBundleVersion</key>
-	<string>1.4</string>
+	<string>1.5</string>
 	<key>SMAuthorizedClients</key>
 	<array>
 		<string>identifier "com.suolapeikko.examples.PrivilegedTaskRunner" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Antti Tulisalo (8TNP32P899)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>

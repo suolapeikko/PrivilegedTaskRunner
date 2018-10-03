@@ -15,7 +15,7 @@ struct HelperConstants {
 /// Because communication over XPC is asynchronous, all methods in the protocol must have a return type of void
 @objc(RemoteProcessProtocol)
 protocol RemoteProcessProtocol {
-    func getVersion(reply: (String) -> Void)
+    func getVersion(reply: @escaping (String) -> Void)
     func runCommand(path: String, authData: NSData?, reply: @escaping (String) -> Void)
     func runCommand(path: String, reply: @escaping (String) -> Void)
 }
