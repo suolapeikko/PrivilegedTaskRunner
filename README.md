@@ -2,6 +2,8 @@
 
 My take on privileged helper, thanks to [Erik's privileged helper tool example](https://github.com/erikberglund/SwiftPrivilegedHelper)
 
+Update: Erik's new privileged helper example is quite perfect, so I won't probably update this anymore.
+
 ## Project and Target
 * Create a project (for example, a normal Cocoa project, like PrivilegedTaskRunner in this example)
 * Create a new command line target (PrivilegedTaskRunnerHelper)
